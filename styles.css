@@ -1,0 +1,72 @@
+/*
+Get the body
+Center the clock horizontally (use display flex and justify content center -- these 2 always goes together)
+Center vertically (Use align items center, this only works if you add height!)
+*/
+
+html {
+  background: #018ded
+    url(https://images.unsplash.com/photo-1614733966769-6142becb311f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+  background-size: cover;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 
+Pickup the class clock-face
+border-radius (to make it round)
+*/
+.clock-face {
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  border: solid 5px rgb(0, 0, 0);
+  position: absolute;
+  box-shadow: 2px 7px 5px rgb(0, 0, 0);
+}
+
+#seconds-hand {
+  position: absolute;
+  height: 220px;
+  width: 2px;
+  background-color: brown;
+  left: 249px;
+  bottom: 249px;
+
+  transform-origin: 0 100%;
+}
+
+#minutes-hand {
+  position: absolute;
+  height: 220px;
+  width: 4px;
+  background-color: rgb(0, 0, 0);
+  left: 248px;
+  bottom: 248px;
+  transform-origin: 0 100%;
+}
+
+#hours-hand {
+  position: absolute;
+  height: 150px;
+  width: 4px;
+  background-color: rgb(0, 0, 0);
+  left: 248px;
+  bottom: 248px;
+  transform-origin: 0 100%;
+}
+
+#center-dot {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: rgb(105, 105, 105);
+  position: absolute;
+  left: 240px;
+  bottom: 240px;
+}
